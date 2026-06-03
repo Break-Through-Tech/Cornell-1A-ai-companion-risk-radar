@@ -18,35 +18,46 @@
 
 ---
 
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
 
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+## 📋 BTT Internal Evaluation Notes
+*(This section is for BTT staff only — remove before sharing with students)*
+
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The project uses Python-compatible libraries for NLP and classification tasks, aligning with students' current skills. |
+| Data Readiness | 🟢 | The dataset is under 1GB and stored in CSV/TSV format, making it accessible and ready for immediate use, facilitating effective learning in data preparation. |
+| Resource Check | 🟢 | All required tools and platforms (e.g., Google Colab) are readily available to students without access issues. |
+
+**Student Fit Score:** 8/10  
+**Technical Depth Score:** 7/10  
+**Overall Recommendation:** APPROVE
+
+**Advisor Feedback Draft:**
+The project effectively leverages NLP for real-world applications in mental health. However, consider providing a more structured approach to data cleaning and annotate the dataset with explicit guidelines. Additionally, ensure that classification models are accessible for interpretation by non-technical stakeholders. Please take these adjustments into account to enhance project clarity and objectives.
 
 ---
 
-# [Project Title]
+# AI Companion Risk Radar: Classifying Risk in Mental Health Apps
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Title, Email]  
+**Company / Org:** Cornell School of Public Policy  
+**Challenge Advisor:** Ibrahim Emara, ie68@cornell.edu  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
-## 🏢 About [Company / Org Name]
+## 🏢 About Cornell School of Public Policy
 
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+The Cornell School of Public Policy is dedicated to advancing equity and social justice through data-informed public policy decision-making. We engage in research and training to address pressing societal challenges.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+In this project, you will use public mental health app review data and natural language processing/supervised classification techniques to build a model that classifies user-reported risk themes in app reviews, such as dependence, attachment, isolation, crisis-response frustration, or other concerns. This will help product, trust and safety, compliance, and app-quality teams better identify recurring user-risk signals that may not be visible from safety policies alone.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+Production of a clear, reproducible risk-theme classification workflow; Model evaluation using macro F1, per-class precision/recall, and confusion matrices; Successful error analysis.
 
 ### Project Milestones
 
@@ -54,9 +65,9 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
+| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
+| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -64,13 +75,13 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
-**Location:** [Link to dataset or instructions for accessing it]
+**Name and Source:** Public mental health app review data (MHARD)  
+**Format:** CSV/TSV  
+**Size:** under 1gb  
+**Location:** [Instructions for accessing the dataset]
 
 ### Key Details
-- [Brief description of what's in the data]
+- Public mental health app review data (MHARD) containing review text, app names, star ratings, dates, helpful counts, and metadata, stored in CSV/TSV format.
 - [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -78,13 +89,18 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
+**ML Problem Type:** Classification, NLP
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- Natural Language Processing (NLP)
+- Supervised Classification
+- TF-IDF
+- Logistic Regression
+- Random Forest
+- Time Series Analysis
 
 **Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- Macro F1, per-class precision/recall, confusion matrices
 
 ---
 
@@ -93,16 +109,16 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+- [Link to an article or blog post about the problem domain]
+- [Link to an industry report or case study]
 
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
+- [Link to a free tutorial on the ML technique(s) involved]
+- [Link to documentation for a key library or tool]
 
 **Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+- [Link to a relevant GitHub repo]
+- [Link to a sample implementation or starter code]
 
 **Other:**
 - [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
@@ -114,13 +130,13 @@ The following resources will help your team understand the problem space and pot
 ## 🤝 How We'll Work Together
 
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** [e.g., Slack (Break Through Tech workspace) or email]  
-**Response time:** [e.g., Within 48 hours on weekdays]  
+**Communication:** Slack (Break Through Tech workspace)  
+**Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** [e.g., Google Colab, VS Code]
-- **Collaboration:** [e.g., GitHub, Notion]
-- **Virtual Meetings:** [e.g., Zoom, Google Meet]
+- **Coding:** Google Colab, VS Code
+- **Collaboration:** GitHub, Notion
+- **Virtual Meetings:** Zoom, Google Meet
 
 ---
 
@@ -130,10 +146,12 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session B). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+---
