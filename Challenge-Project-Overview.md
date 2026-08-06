@@ -87,7 +87,7 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** Public mental health app review data (MHARD)  
+**Name and Source:** [TBD]; see links below  
 **Format:** CSV/TSV  
 **Size:** under 1gb  
 **Location:** https://github.com/Sensify-Lab/MHARD; https://zenodo.org/records/18751157
