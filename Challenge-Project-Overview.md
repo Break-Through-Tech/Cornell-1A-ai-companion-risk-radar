@@ -57,17 +57,29 @@ The Cornell School of Public Policy is dedicated to advancing equity and social 
 In this project, you will use public mental health app review data and natural language processing/supervised classification techniques to build a model that classifies user-reported risk themes in app reviews, such as dependence, attachment, isolation, crisis-response frustration, or other concerns. This will help product, trust and safety, compliance, and app-quality teams better identify recurring user-risk signals that may not be visible from safety policies alone.
 
 ### Success Criteria
-Production of a clear, reproducible risk-theme classification workflow; Model evaluation using macro F1, per-class precision/recall, and confusion matrices; Successful error analysis.
+Success will be measured by whether the team can produce a clear, reproducible risk-theme classification workflow using public app review data. A successful December outcome would include:
+
+- A cleaned and documented review dataset or subset.
+- A labeled training sample with a clear risk-theme codebook.
+- At least one baseline classifier that predicts review-level risk themes.
+- Model evaluation using macro F1, per-class precision/recall, and confusion matrices.
+- Error analysis explaining where the model performs well or poorly.
+- A final presentation that explains what the results mean for product, trust and safety, compliance, or app-quality teams.
+
+If the team completes the optional dashboard, success would also include a basic visualization of which risk themes appear most often by app and, if feasible, over time.
+
+### Stretch Goals
+If the team progresses quickly, the natural stretch goal is a 'Temporal Risk Theme' Dashboard. The team could aggregate labeled reviews by app, risk theme, and week or month to show whether certain themes rise over time or cluster around specific tools. A further extension could compare AI/chatbot-relevant apps with broader mental health apps.
 
 ### Project Milestones
 
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
 | Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
-| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
-| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
+|---|---|---|
+| September | Data exploration, preprocessing, and label design | • Review the MHARD mental health app review dataset and data dictionary.<br>• Explore review text, app names, star ratings, dates, helpful counts, and metadata.<br>• Subset AI/chatbot-relevant apps if feasible.<br>• Define a small risk-theme taxonomy, such as dependence, attachment, isolation, crisis-response frustration, and other.<br>• Hand-label a training sample and check basic label consistency. |
+| October | Baseline modeling and model comparison | • Convert review text into model-ready features using methods such as TF-IDF.<br>• Train baseline supervised classifiers, such as logistic regression and random forest.<br>• Compare model performance across risk-theme classes.<br>• Review errors to understand which themes are easy or difficult to detect. |
+| November | Evaluation, interpretation, and optional dashboard prototype | • Finalize evaluation metrics, including macro F1 and per-class precision/recall.<br>• Interpret which words, features, or review patterns help classify each risk theme.<br>• If time allows, aggregate labeled reviews by app and time period to build a simple dashboard showing risk-theme patterns. |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -78,10 +90,9 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 **Name and Source:** Public mental health app review data (MHARD)  
 **Format:** CSV/TSV  
 **Size:** under 1gb  
-**Location:** [Instructions for accessing the dataset]
+**Location:** https://github.com/Sensify-Lab/MHARD; https://zenodo.org/records/18751157
 
 ### Key Details
-- Public mental health app review data (MHARD) containing review text, app names, star ratings, dates, helpful counts, and metadata, stored in CSV/TSV format.
 - [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -89,18 +100,13 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** Classification, NLP
+**ML Problem Type:** Classification, NLP, Time Series Analysis
 
 **Recommended Libraries:**
-- Natural Language Processing (NLP)
-- Supervised Classification
-- TF-IDF
-- Logistic Regression
-- Random Forest
-- Time Series Analysis
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
 
 **Evaluation Metrics:**
-- Macro F1, per-class precision/recall, confusion matrices
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
 
 ---
 
@@ -109,16 +115,16 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [Link to an article or blog post about the problem domain]
-- [Link to an industry report or case study]
+- [e.g., Link to an article or blog post about the problem domain]
+- [e.g., Link to an industry report or case study]
 
 **Technical Tutorials:**
-- [Link to a free tutorial on the ML technique(s) involved]
-- [Link to documentation for a key library or tool]
+- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- [e.g., Link to documentation for a key library or tool]
 
 **Code Examples:**
-- [Link to a relevant GitHub repo]
-- [Link to a sample implementation or starter code]
+- [e.g., Link to a relevant GitHub repo]
+- [e.g., Link to a sample implementation or starter code]
 
 **Other:**
 - [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
@@ -129,14 +135,19 @@ The following resources will help your team understand the problem space and pot
 
 ## 🤝 How We'll Work Together
 
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack (Break Through Tech workspace)  
-**Response time:** Within 48 hours on weekdays  
+**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
 
-**Recommended Tools:**
-- **Coding:** Google Colab, VS Code
-- **Collaboration:** GitHub, Notion
-- **Virtual Meetings:** Zoom, Google Meet
+ **Other ways to reach out to me with questions:** 
+* [e.g., Your team's channel within Break Through Tech’s Discord space]
+* [e.g., Email; please copy your teammates and AI Studio Coach]
+* [e.g., Request a team check-in on Zoom]
+* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+
+> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+
+**Recommended free coding / collaboration tools**
+* […]
+* […]
 
 ---
 
@@ -146,12 +157,10 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I'm excited to work with you!
+I’m excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
-
----
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
