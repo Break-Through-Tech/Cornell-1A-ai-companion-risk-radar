@@ -40,7 +40,8 @@ The project effectively leverages NLP for real-world applications in mental heal
 # AI Companion Risk Radar: Classifying Risk in Mental Health Apps
 
 **Company / Org:** Cornell School of Public Policy  
-**Challenge Advisor:** Ibrahim Emara, ie68@cornell.edu  
+**Challenge Advisor:** Ibrahim Emara, ie68@cornell.edu
+**AI Studio Coach:** Shaun Figueiro, shaun.figueiro@breakthroughtech.org
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
