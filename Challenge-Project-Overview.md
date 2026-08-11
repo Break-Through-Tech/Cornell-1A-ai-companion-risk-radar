@@ -39,16 +39,16 @@ The project effectively leverages NLP for real-world applications in mental heal
 
 # AI Companion Risk Radar: Classifying Risk in Mental Health Apps
 
-**Company / Org:** Cornell School of Public Policy  
+**Company / Org:** Cornell Brooks School of Public Policy  
 **Challenge Advisor:** Ibrahim Emara, ie68@cornell.edu              
 **AI Studio Coach:** Shaun Figueiro, shaun.figueiro@breakthroughtech.org              
 **Program:** Break Through Tech AI Studio - Fall 2026       
 
 ---
 
-## 🏢 About Cornell School of Public Policy
+## 🏢 About Cornell Brooks School of Public Policy
 
-The Cornell School of Public Policy is dedicated to advancing equity and social justice through data-informed public policy decision-making. We engage in research and training to address pressing societal challenges.
+The Cornell Brooks School of Public Policy is dedicated to advancing the well-being of all people through the development of new knowledge to solve pressing global policy challenges, rigorous training of the next generation of policy leaders, and active engagement with policymaking around the globe.
 
 ---
 
