@@ -1,6 +1,6 @@
 # AI Companion Risk Radar: Classifying User-Reported Risk Themes in Mental Health App Reviews
 
-**Company / Org:** Cornell Jeb E. Brooks School of Public Policy
+**Company / Org:** Jeb E. Brooks School of Public Policy, Cornell University
 **Challenge Advisor:** Ibrahim Emara, [ie68@cornell.edu](mailto:ie68@cornell.edu)
 **AI Studio Coach:** Shaun Figueiro, [shaun.figueiro@breakthroughtech.org](mailto:shaun.figueiro@breakthroughtech.org)
 **Program:** Break Through Tech AI Studio - Fall 2026
