@@ -15,7 +15,7 @@ https://github.com/Sensify-Lab/MHARD
 
 This dataset contains 5,126 Reddit posts from 47 mental health-related subreddits discussing AI use for emotional support and therapy-related purposes. It includes annotations related to usefulness, trust, risk, bond, sentiment, usage intent, and comparison to human therapy.
 
-This dataset is a **supplementary reference** for understanding AI-mediated mental-health experiences and informing the project's risk-theme categories. Raw post text is not included.
+This dataset is a supplementary reference for understanding AI-mediated mental-health experiences and informing the project's risk-theme categories. Raw post text is not included.
 
 **ACCESS DATASET BELOW ⬇️**
 https://zenodo.org/records/18751157
