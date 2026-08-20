@@ -4,7 +4,7 @@
 
 **MHARD** contains approximately 200,000 Google Play reviews from 73 mental health apps. It includes review text, app names, ratings, dates, likes, developer responses, and other metadata.
 
-This is the **primary dataset for the project** because the review text can be used to build and evaluate the risk-theme classifier.
+This is the primary dataset for the project because the review text can be used to build and evaluate the risk-theme classifier.
 
 **ACCESS DATASET BELOW ⬇️**
 https://github.com/Sensify-Lab/MHARD
