@@ -88,15 +88,22 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [TBD]; see links below  
-**Format:** CSV/TSV  
-**Size:** under 1gb  
+**Name and Source:** AI-Mediated Mental Health Support on Reddit: Annotated Dataset of 5,126 Posts Across 47 Communities — Aghakhani & Rezapour (2026), Zenodo
+**Format:** CSV 
+**Size:** ~2.3 MB
 **Location:** https://github.com/Sensify-Lab/MHARD; https://zenodo.org/records/18751157
 
 ### Key Details
-- [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
-
+- Contains 5,126 Reddit posts from 47 mental health-related subreddits discussing AI use for emotional support and therapy-related purposes.
+- Includes annotations for factors such as:
+    A. Perceived usefulness
+    B. Trust
+    C. Risks
+    D. Bond
+    E. Sentiment
+    F. Usage intent
+    G. Comparison to human therapy
+- **Limitation**: Raw post text is not included; the dataset provides raw identifiers and derived annotations to reduce re-identification risk.
 ---
 
 ## 🛠️ Suggested Approach
