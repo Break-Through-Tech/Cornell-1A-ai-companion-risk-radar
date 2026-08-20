@@ -1,174 +1,253 @@
----
+# AI Companion Risk Radar: Classifying User-Reported Risk Themes in Mental Health App Reviews
 
-> ## Challenge Advisor: Update & Finalize Your Project Overview
->
-> > 💡 **These grey text instructions are just for you, the team's Challenge Advisor; please delete them once you have completed the steps below.**
->
-> We've pre-populated this Challenge Project Overview page — which is what will be shared with your Break Through Tech student team in August — using the details from your submission form. You should have received an email inviting you to join this repo as a Collaborator, enabling you to add files and make edits.
-> 
-> In order for your project to be finalized and assigned to a team, please:
-> 1. **Review all sections below** and update or expand any content as needed, making sure to address the SME Feedback in the section immediately below. Look for square brackets to find the places below that require additional inputs from you (e.g., "About [Company / Org Name]").
-> 2. **Add your dataset** to the [data folder](data) in this repo.
-> 3. **Close the Issue assigned to you in this repo** to let us know that you have made your edits and the overview page is ready for final review. You can do this by going to the _Issues_ tab in the top left section of the menu above, add a comment that says "CA review complete", and click the button to Close the Issue. 
->
-> If you're unfamiliar with how to edit a page like this in GitHub, check out [this tutorial](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/handson/edit-readme.html) for a quick overview (start with step 2 and only edit this page), and [this guide](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/markdown.html) on how to use Markdown to compose text.
->
->
-> ❌ Remember that this is a public repo. Do NOT include: Proprietary data, PII, API keys, credentials, or anything confidential.
-
----
-
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | 🟢 | The project uses Python-compatible libraries for NLP and classification tasks, aligning with students' current skills. |
-| Data Readiness | 🟢 | The dataset is under 1GB and stored in CSV/TSV format, making it accessible and ready for immediate use, facilitating effective learning in data preparation. |
-| Resource Check | 🟢 | All required tools and platforms (e.g., Google Colab) are readily available to students without access issues. |
-
-**Student Fit Score:** 8/10  
-**Technical Depth Score:** 7/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-The project effectively leverages NLP for real-world applications in mental health. However, consider providing a more structured approach to data cleaning and annotate the dataset with explicit guidelines. Additionally, ensure that classification models are accessible for interpretation by non-technical stakeholders. Please take these adjustments into account to enhance project clarity and objectives.
-
----
-
-# AI Companion Risk Radar: Classifying Risk in Mental Health Apps
-
-**Company / Org:** Cornell Brooks School of Public Policy  
-**Challenge Advisor:** Ibrahim Emara, ie68@cornell.edu              
-**AI Studio Coach:** Shaun Figueiro, shaun.figueiro@breakthroughtech.org              
-**Program:** Break Through Tech AI Studio - Fall 2026       
+**Company / Org:** Cornell Jeb E. Brooks School of Public Policy
+**Challenge Advisor:** Ibrahim Emara, [ie68@cornell.edu](mailto:ie68@cornell.edu)
+**AI Studio Coach:** Shaun Figueiro, [shaun.figueiro@breakthroughtech.org](mailto:shaun.figueiro@breakthroughtech.org)
+**Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
 ## 🏢 About Cornell Brooks School of Public Policy
 
-The Cornell Brooks School of Public Policy is dedicated to advancing the well-being of all people through the development of new knowledge to solve pressing global policy challenges, rigorous training of the next generation of policy leaders, and active engagement with policymaking around the globe.
+The Jeb E. Brooks School of Public Policy at Cornell University advances the well-being of people through policy research, training, and engagement. The School prepares students to use evidence and analysis to address pressing public-policy challenges in the United States and globally.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-In this project, you will use public mental health app review data and natural language processing/supervised classification techniques to build a model that classifies user-reported risk themes in app reviews, such as dependence, attachment, isolation, crisis-response frustration, or other concerns. This will help product, trust and safety, compliance, and app-quality teams better identify recurring user-risk signals that may not be visible from safety policies alone.
+
+In this project, you will use public mental health app review data and natural language processing (NLP) and supervised classification techniques to build a model that classifies user-reported risk themes in app reviews, such as dependence, attachment, isolation, crisis-response frustration, or other concerns.
+
+This project aims to help product, trust and safety, compliance, and app-quality teams identify recurring user-risk signals that may not be visible from star ratings or safety policies alone.
+
+The project focuses on identifying patterns in public user reviews. It is not intended to diagnose users, evaluate clinical effectiveness, or establish that an AI tool caused a particular mental-health outcome.
 
 ### Success Criteria
-Success will be measured by whether the team can produce a clear, reproducible risk-theme classification workflow using public app review data. A successful December outcome would include:
 
-- A cleaned and documented review dataset or subset.
-- A labeled training sample with a clear risk-theme codebook.
-- At least one baseline classifier that predicts review-level risk themes.
-- Model evaluation using macro F1, per-class precision/recall, and confusion matrices.
-- Error analysis explaining where the model performs well or poorly.
-- A final presentation that explains what the results mean for product, trust and safety, compliance, or app-quality teams.
+A successful December outcome would include:
 
-If the team completes the optional dashboard, success would also include a basic visualization of which risk themes appear most often by app and, if feasible, over time.
+* A cleaned and documented review dataset or subset.
+* A clear risk-theme annotation codebook.
+* A hand-labeled training sample with documented labeling decisions.
+* At least one interpretable baseline classifier that predicts review-level risk themes.
+* Model evaluation using macro F1, per-class precision/recall, and confusion matrices.
+* Error analysis explaining where the model performs well or poorly.
+* Plain-language interpretation of results for non-technical stakeholders.
+* A final presentation summarizing the methodology, findings, limitations, and potential applications.
 
 ### Stretch Goals
-If the team progresses quickly, the natural stretch goal is a 'Temporal Risk Theme' Dashboard. The team could aggregate labeled reviews by app, risk theme, and week or month to show whether certain themes rise over time or cluster around specific tools. A further extension could compare AI/chatbot-relevant apps with broader mental health apps.
+
+If the team progresses quickly, the main stretch goal is a **Temporal Risk Theme Dashboard**.
+
+The team could aggregate classified reviews by app, risk theme, and week or month to explore whether specific themes increase over time or cluster around particular tools. A further extension could compare AI/chatbot-relevant apps with the broader set of mental health apps in the dataset.
 
 ### Project Milestones
 
-Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
+Use these milestones to guide your work. Your team will create a **GitHub Projects board** to break each milestone into manageable tasks.
 
-| Month | Milestone | Key Activities |
-|---|---|---|
-| September | Data exploration, preprocessing, and label design | • Review the MHARD mental health app review dataset and data dictionary.<br>• Explore review text, app names, star ratings, dates, helpful counts, and metadata.<br>• Subset AI/chatbot-relevant apps if feasible.<br>• Define a small risk-theme taxonomy, such as dependence, attachment, isolation, crisis-response frustration, and other.<br>• Hand-label a training sample and check basic label consistency. |
-| October | Baseline modeling and model comparison | • Convert review text into model-ready features using methods such as TF-IDF.<br>• Train baseline supervised classifiers, such as logistic regression and random forest.<br>• Compare model performance across risk-theme classes.<br>• Review errors to understand which themes are easy or difficult to detect. |
-| November | Evaluation, interpretation, and optional dashboard prototype | • Finalize evaluation metrics, including macro F1 and per-class precision/recall.<br>• Interpret which words, features, or review patterns help classify each risk theme.<br>• If time allows, aggregate labeled reviews by app and time period to build a simple dashboard showing risk-theme patterns. |
+| Month         | Milestone                                          | Key Activities                                                                                                                                                                                                                                                                    |
+| ------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **August**    | Kickoff and project setup                          | Review the project scope and datasets; confirm team roles; set up the working environment; review the proposed risk-theme categories; begin identifying AI/chatbot-relevant apps within MHARD.                                                                                    |
+| **September** | Data exploration, preprocessing, and label design  | Explore review text, app names, ratings, dates, likes, and other metadata; document missing values and duplicates; define inclusion/exclusion criteria for AI/chatbot-relevant apps; finalize the risk-theme codebook; hand-label a training sample and review label consistency. |
+| **October**   | Baseline modeling and model comparison             | Convert review text into model-ready features using TF-IDF; train an interpretable baseline such as logistic regression; compare with at least one additional classification approach; examine class imbalance and model errors.                                                  |
+| **November**  | Evaluation, interpretation, and optional dashboard | Evaluate models using macro F1, per-class precision/recall, and confusion matrices; conduct error analysis; identify interpretable features or patterns associated with each class; if time allows, begin the temporal dashboard.                                                 |
+| **December**  | Final deliverables and presentation                | Finalize the model and documentation; summarize findings and limitations in plain language; polish any dashboard or visualizations; prepare and deliver the final AI Studio presentation.                                                                                         |
 
-> **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
+> **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to **Projects → New project → Board**.
 
 ---
 
 ## 📊 Dataset
 
-**Name and Source:** AI-Mediated Mental Health Support on Reddit: Annotated Dataset of 5,126 Posts Across 47 Communities — Aghakhani & Rezapour (2026), Zenodo
-**Format:** CSV 
-**Size:** ~2.3 MB
-**Location:** https://github.com/Sensify-Lab/MHARD; https://zenodo.org/records/18751157
+### Primary Dataset: MHARD — Mental Health App Reviews Dataset
+
+**Name and Source:** MHARD — Mental Health App Reviews Dataset, Sensify Lab
+**Format:** CSV (`MHARD_dataset.csv`)
+**Size:** Approximately 75.7 MB
+**Location:** https://github.com/Sensify-Lab/MHARD
 
 ### Key Details
-- Contains 5,126 Reddit posts from 47 mental health-related subreddits discussing AI use for emotional support and therapy-related purposes.
-- Includes annotations for factors such as:
-    A. Perceived usefulness
-    B. Trust
-    C. Risks
-    D. Bond
-    E. Sentiment
-    F. Usage intent
-    G. Comparison to human therapy
-- **Limitation**: Raw post text is not included; the dataset provides raw identifiers and derived annotations to reduce re-identification risk.
+
+* Contains approximately 200,000 Google Play reviews from 73 mental health apps.
+* Relevant fields include:
+
+  * `UID` — unique review identifier
+  * `app_name` — app name
+  * `rating` — user rating from 1–5
+  * `date` — review date
+  * `review` — original review text
+  * `review_cleaned` — preprocessed review text
+  * `likes` — number of likes
+  * `response` — developer response, when available
+* The dataset includes both AI/chatbot-related and broader mental health apps. The team should document clear criteria for selecting the subset most relevant to this project.
+* The dataset does **not** contain the risk-theme labels needed for this project. The team will create a hand-labeled training sample using the annotation guidelines below.
+* Some fields contain missing values, including developer responses and some existing model-generated predictions.
+
+### Supplementary Reference Dataset: AI-Mediated Mental Health Support on Reddit
+
+**Name and Source:** *AI-Mediated Mental Health Support on Reddit: Annotated Dataset of 5,126 Posts Across 47 Communities* — Aghakhani & Rezapour (2026), Zenodo
+**Format:** CSV
+**Size:** Approximately 2.3 MB
+**Location:** https://zenodo.org/records/18751157
+
+This dataset contains 5,126 posts from 47 mental health-related subreddits discussing AI use for emotional support and therapy-related purposes. It includes annotations for perceived usefulness, trust, risk, bond, sentiment, usage intent, and comparison to human therapy.
+
+Because raw Reddit post text is not included, this dataset should primarily serve as a **reference for understanding AI-mediated mental-health use and informing the risk-theme taxonomy**, rather than as the main dataset for text classification.
+
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** Classification, NLP, Time Series Analysis
+**Core ML Problem Types:** Classification and Natural Language Processing (NLP)
+**Stretch Goal:** Time-series aggregation and dashboarding
 
-**Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+### Recommended Libraries
 
-**Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+* `pandas` — data loading, cleaning, and exploration
+* `numpy` — basic numerical operations
+* `scikit-learn` — TF-IDF, classification models, train/test splitting, and evaluation
+* `matplotlib` — exploratory and model-performance visualizations
+* `plotly` or `streamlit` — optional dashboard development
+
+### Step 1: Data Cleaning and Exploration
+
+Before modeling:
+
+1. Inspect missing values and duplicate reviews.
+2. Review the distribution of apps, ratings, dates, and review lengths.
+3. Define and document which apps will be treated as AI/chatbot-relevant.
+4. Retain fields needed for analysis, including review text, app name, rating, date, and likes.
+5. Document every major cleaning or filtering decision so the workflow is reproducible.
+
+Avoid removing words or phrases that may carry meaning relevant to dependence, attachment, isolation, or frustration.
+
+### Step 2: Risk-Theme Annotation
+
+Use the following categories as a **starting codebook**. The team may refine the definitions with the Challenge Advisor before full labeling begins.
+
+* **Dependence:** The review suggests reliance on the tool, difficulty reducing use, or a perceived need to continue using it for emotional support.
+* **Attachment:** The review describes an emotional bond, relationship, affection, or sense of connection with the tool.
+* **Isolation / Displacement:** The review suggests the tool is replacing, reducing, or being preferred over interaction with other people or sources of human support.
+* **Crisis-Response Frustration:** The review criticizes, expresses dissatisfaction with, or describes problems with the tool's handling of crisis, safety, or referral situations.
+* **Other / None:** The review does not clearly fit one of the target risk themes.
+
+Before labeling the full training sample:
+
+1. Label a small pilot sample.
+2. Discuss ambiguous examples and refine the codebook.
+3. Have at least two team members independently label a portion of the same reviews.
+4. Compare disagreements and document how they are resolved.
+5. If feasible, calculate an inter-rater agreement measure such as Cohen's kappa.
+
+### Step 3: Baseline Modeling
+
+Start with an interpretable baseline:
+
+1. Convert review text into TF-IDF features.
+2. Train a logistic regression classifier.
+3. Compare the baseline with at least one additional model, such as random forest or another appropriate supervised classifier.
+4. Address class imbalance if necessary.
+
+More complex NLP models may be explored only after the baseline pipeline is working reliably.
+
+### Step 4: Evaluation and Interpretation
+
+**Primary evaluation metric:**
+
+* Macro F1
+
+**Additional metrics:**
+
+* Per-class precision
+* Per-class recall
+* Confusion matrix
+
+Because the final audience may include non-technical stakeholders, model performance should also be explained in plain language.
+
+Where possible, interpret:
+
+* Which words or features contribute most strongly to different classifications.
+* Which risk themes are easiest or hardest to distinguish.
+* Common patterns in misclassified reviews.
+* Important limitations that stakeholders should understand before using the results.
 
 ---
 
 ## 📚 Resources to Get Started
 
-The following resources will help your team understand the problem space and potential technical approaches for this project:
+### Background Reading
 
-**Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+* **MHARD Dataset and Documentation:**
+  https://github.com/Sensify-Lab/MHARD
 
-**Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
+* **Wang et al. (2025), "Leveraging Large Language Models for Review Classification and Rating Estimation of Mental Health Applications":**
+  https://doi.org/10.1609/icwsm.v19i1.35916
 
-**Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+* **Cooper et al. (2026), "Framing Responsible Design of AI Mental Well-Being Support: AI as Primary Care, Nutritional Supplement, or Yoga Instructor?":**
+  https://doi.org/10.1145/3772318.3791556
 
-**Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+### Technical Tutorials and Documentation
 
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+* **Scikit-learn: Working With Text Data:**
+  https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html
+
+* **Scikit-learn: Model Evaluation and Classification Metrics:**
+  https://scikit-learn.org/stable/modules/model_evaluation.html
+
+* **Scikit-learn: Logistic Regression:**
+  https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+
+### Optional Dashboard Resource
+
+* **Streamlit Documentation:**
+  https://docs.streamlit.io/
+
+*You are encouraged to explore beyond these resources and share useful findings with the team.*
 
 ---
 
 ## 🤝 How We'll Work Together
 
-**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
+**Official check-ins:**
+We will meet during the assigned **60-minute AI Studio Lab Section block on the second and fourth week of each month**.
 
- **Other ways to reach out to me with questions:** 
-* [e.g., Your team's channel within Break Through Tech’s Discord space]
-* [e.g., Email; please copy your teammates and AI Studio Coach]
-* [e.g., Request a team check-in on Zoom]
-* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+**Communication outside official check-ins:**
 
-> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+* Use the team's channel in the Break Through Tech Discord workspace for routine project questions.
+* Email the Challenge Advisor when a question requires direct follow-up; please copy the AI Studio Coach when relevant to the whole team.
+* Technical debugging, detailed Python questions, GitHub troubleshooting, and day-to-day project management should generally be directed to the AI Studio Coach.
+* Additional Zoom meetings may be scheduled when necessary and as availability allows.
 
-**Recommended free coding / collaboration tools**
-* […]
-* […]
+**Response time:**
+I will aim to respond within **48 hours on weekdays**. For urgent technical questions, please contact the AI Studio Coach.
+
+### Recommended Free Tools
+
+* **Coding / analysis:** Google Colab or Jupyter Notebook
+* **Version control and project tracking:** GitHub and GitHub Projects
+* **Communication:** Break Through Tech Discord
+* **Virtual meetings:** Zoom
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Review this overview document** and note any questions for our first meeting
-2. **Begin reviewing the dataset** using the link above
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+1. **Read this overview** and note any questions for our first meeting.
+2. **Open the MHARD repository** and review its README, dataset fields, and sample data.
+3. **Review the supplementary Reddit dataset** to understand how previous researchers have categorized AI-mediated mental-health experiences.
+4. **Read the GitHub Projects documentation** here:
+   https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+5. Come to our first meeting prepared to discuss:
 
-I’m excited to work with you!
+   * Initial questions about the project
+   * Which apps may belong in the AI/chatbot-relevant subset
+   * Any risk-theme definitions that seem unclear
+
+Looking forward to working with you all!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C).
